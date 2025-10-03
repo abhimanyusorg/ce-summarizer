@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { marked } from 'marked';
+import Link from 'next/link';
 
 export default async function AboutPage() {
   // Read the README file
@@ -20,12 +21,12 @@ export default async function AboutPage() {
               <h1 className="text-2xl font-bold text-gray-900">About Project</h1>
               <p className="text-sm text-gray-500">CE Email Thread Summarization System</p>
             </div>
-            <a
+            <Link
               href="/"
               className="inline-flex items-center px-4 py-2 text-sm font-medium bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors border border-gray-300"
             >
               ← Back to Dashboard
-            </a>
+            </Link>
           </div>
         </div>
       </header>
