@@ -122,20 +122,31 @@ Visit **http://localhost:3000**. Sample data auto-loads on first run.
 
 **Development**: `npm run dev` (hot reload at localhost:3000)  
 **Production**: `npm run build && npm start`  
-**Testing**: `npm test` | **Integration Tests**: `npm run test:integration` | **Linting**: `npm run lint`
+**Testing**: `npm test` | **Integration**: `npm run test:integration` | **Linting**: `npm run lint`
 
 ## 🧪 Testing
 
+**Test Suites**: 4 total (3 unit + 1 integration)  
+**Total Tests**: 8 passing tests  
 **Unit Tests**: 6 API endpoint tests with mocked dependencies  
-**Integration Tests**: Full CE workflow validation (seed → summarize → edit → approve → reset)  
-**Test Coverage**: Database operations, AI summarization, approval workflows, analytics  
-**CI/CD Ready**: Jest configuration with separate unit/integration test environments
+**Integration Tests**: 2 comprehensive CE workflow validations (seed → summarize → edit → approve → reset)  
+**Test Coverage**: Database operations, AI summarization (mocked), approval workflows, analytics  
+**CI/CD Ready**: Jest configuration with separate environments, mocked external APIs
+
+![Test Results](https://ce-summarizer.onrender.com/pass-test-cases.png)
 
 ```bash
-npm test                    # Run unit tests
-npm run test:integration    # Run integration tests (real database)
+npm test                    # Run all tests (8 tests)
+npm run test:integration    # Run integration tests only (2 tests)
 npm run test:watch          # Watch mode for development
+npm run lint                # Code quality checks
 ```
+
+**Test Architecture**:
+- **Unit Tests**: API routes, database queries, utility functions
+- **Integration Tests**: Full workflow with mocked OpenRouter API (no external dependencies)
+- **Mock Strategy**: OpenRouter API calls mocked to ensure reliable CI/CD
+- **Database**: Real SQLite database for integration tests, cleaned between runs
 
 ## 🧩 Core Features
 
