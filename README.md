@@ -98,6 +98,14 @@ ce-summarization/
 │   ├── index.ts                # Main type definitions
 │   └── crm.ts                  # CRM-related types
 │
+├── __tests__/                  # Test suites
+│   ├── api/                    # API endpoint tests
+│   │   ├── threads.test.ts     # Thread API tests
+│   │   ├── summaries.test.ts   # Summary API tests
+│   │   └── analytics.test.ts   # Analytics API tests
+│   └── integration/            # Integration tests
+│       └── workflow.test.ts    # Full CE workflow tests
+│
 ├── public/                     # Static assets
 └── node_modules/               # Dependencies
 ```
