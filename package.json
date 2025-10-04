@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "node keep-alive.js & next dev --turbopack",
     "build": "next build --turbopack",
-    "start": "next start",
+    "start": "node keep-alive.js & next start",
     "lint": "eslint",
     "db:seed": "tsx lib/seed.ts",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "keep-alive": "node keep-alive.js"
   },
   "dependencies": {
     "better-sqlite3": "^12.4.1",
