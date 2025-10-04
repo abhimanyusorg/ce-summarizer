@@ -2,6 +2,11 @@
   "name": "ce-summarization",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ce-summarizer.onrender.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhimanyusorg/ce-summarizer"
+  },
   "scripts": {
     "dev": "node keep-alive.js & next dev --turbopack",
     "build": "next build --turbopack",
@@ -10,6 +15,7 @@
     "db:seed": "tsx lib/seed.ts",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:integration": "jest --config jest.integration.config.js",
     "keep-alive": "node keep-alive.js"
   },
   "dependencies": {
@@ -37,6 +43,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/swagger-ui-react": "^5.18.0",
+    "dotenv": "^17.2.3",
     "drizzle-kit": "^0.31.5",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",

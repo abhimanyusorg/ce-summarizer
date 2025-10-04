@@ -1,9 +1,16 @@
 # CE Email Thread Summarization System
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View-blue?style=for-the-badge&logo=render)](https://ce-summarizer.onrender.com)
+[![GitHub](https://img.shields.io/badge/GitHub-View_Code-black?style=for-the-badge&logo=github)](https://github.com/abhimanyusorg/ce-summarizer)
+
 **Prototype for Enterprise Ecommerce Accelerators**
 
 AI-powered summarization system reducing CE processing time by **68%** (8min → 2.5min). Designed for Spreetail.com-scale operations handling thousands of brand email threads daily.
 
+## 🌐 Live Demo
+
+🚀 **[View Live Application](https://ce-summarizer.onrender.com)**  
+📂 **[GitHub Repository](https://github.com/abhimanyusorg/ce-summarizer)**
 
 ## 🛠️ Tech Stack
 
@@ -115,7 +122,20 @@ Visit **http://localhost:3000**. Sample data auto-loads on first run.
 
 **Development**: `npm run dev` (hot reload at localhost:3000)  
 **Production**: `npm run build && npm start`  
-**Testing**: `npm test` | **Linting**: `npm run lint`
+**Testing**: `npm test` | **Integration Tests**: `npm run test:integration` | **Linting**: `npm run lint`
+
+## 🧪 Testing
+
+**Unit Tests**: 6 API endpoint tests with mocked dependencies  
+**Integration Tests**: Full CE workflow validation (seed → summarize → edit → approve → reset)  
+**Test Coverage**: Database operations, AI summarization, approval workflows, analytics  
+**CI/CD Ready**: Jest configuration with separate unit/integration test environments
+
+```bash
+npm test                    # Run unit tests
+npm run test:integration    # Run integration tests (real database)
+npm run test:watch          # Watch mode for development
+```
 
 ## 🧩 Core Features
 
