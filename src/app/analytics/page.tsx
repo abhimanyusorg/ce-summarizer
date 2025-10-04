@@ -5,7 +5,8 @@ import { Badge } from "@/components/ui/badge";
 
 async function getAnalytics() {
   try {
-    const res = await fetch("http://localhost:3000/api/analytics/overview", {
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+    const res = await fetch(`${baseUrl}/api/analytics/overview`, {
       cache: "no-store",
     });
 

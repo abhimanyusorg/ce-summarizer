@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 const NLP_CONFIG = {
   baseUrl: 'https://openrouter.ai/api/v1/chat/completions',
-  model: 'deepseek/deepseek-chat-v3.1:free',
+  model: 'deepseek/deepseek-chat-v3.1:free', // Using a free model that actually exists
   timeout: 30000,
 };
 

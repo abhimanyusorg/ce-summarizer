@@ -8,7 +8,8 @@ import { notFound } from "next/navigation";
 
 async function getThread(id: string) {
   try {
-    const res = await fetch(`http://localhost:3000/api/threads/${id}`, {
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+    const res = await fetch(`${baseUrl}/api/threads/${id}`, {
       cache: "no-store",
     });
 
