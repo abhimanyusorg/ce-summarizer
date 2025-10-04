@@ -139,7 +139,7 @@ ce-summarization/
    NEXT_PUBLIC_SITE_URL=http://localhost:3000
    ```
 
-4. **Seed the database**
+4. **Seed the database** (Optional as it will autoset on project run or you can hit 'Reset Data' button once project run)
    ```bash
    npm run db:seed
    ```
